@@ -1,0 +1,15 @@
+.header {
+  background: #222224;
+  border-bottom: 0.6px solid #E3E2E2;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  min-height: 87px;
+}
+
+
+.header__contacts {
+  margin-left: auto;
+}

@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Bebas';
+  src: url('../font/bebasneuebold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
