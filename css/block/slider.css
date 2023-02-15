@@ -1,0 +1,15 @@
+.banner__slider {
+  width: 100%;
+  height: 100%;
+}
+
+.slider__wrapper {
+}
+
+.slider__slide {
+  width: 870px;
+  height: 517px;
+  background-position:  center;
+  background-size: cover;
+}
+

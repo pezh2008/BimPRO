@@ -20,3 +20,14 @@
   letter-spacing: 0.01em;
   color: #FFFFFF;
 }
+
+@media(max-width:480px) {
+  .contacts__mail {
+    display: none;
+  }
+
+  .contacts__phone {
+    font-size: 12px;
+    line-height: 27px;
+  }
+}
