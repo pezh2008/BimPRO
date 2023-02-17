@@ -27,9 +27,14 @@
   }
 
 }
+@media(max-width: 980px) {
+  .logo {
+    margin-right: 0;
+  }
 
+}
 
-@media(max-width:480px) {
+@media(max-width: 480px) {
   .logo__small-img {
     display: none;
   }

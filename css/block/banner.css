@@ -1,5 +1,6 @@
 .banner {
-  padding-top: 100px;
+  padding-top: 156px;
+  margin-bottom: 84px;
 }
 
 .banner__container {
@@ -13,7 +14,7 @@
 }
 
 .banner__title {
-  font-family: 'Bebas';
+  font-family: 'Bebas Neue';
   font-weight: 700;
   font-size: 70px;
   line-height: 68px;
@@ -33,4 +34,133 @@
   margin-bottom: 50px;
 }
 
-.banner__btn {}
+
+.banner__slider {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  border-radius: 10px;
+  width: 870px;
+  height: 517px;
+  background-position: center;
+  background-size: cover;
+}
+
+.slider__bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  transform: rotate(180deg);
+}
+
+
+.slider__bg span {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+  writing-mode: vertical-rl;
+}
+
+.banner__nav {
+  margin-top: 27px;
+  margin-left: auto;
+  position: relative;
+  max-width: 311px;
+  height: 20px;
+
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--light-color);
+  height: 0;
+  width: 0;
+  display: block;
+  top: 0;
+  margin-top: 0;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.swiper-scrollbar {
+  max-width: 253px;
+  top: 8px;
+
+
+}
+
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  background: var(--light-color);
+  height: 1px;
+  left: 12%;
+}
+
+.swiper-scrollbar-drag {
+  height: 3px;
+  background: var(--accent-color);
+  top: -1px;
+}
+
+
+
+@media(max-width: 980px) {
+  .banner{
+    padding-top: 100px;
+  }
+  .banner__container {
+    flex-direction: column;
+    gap: 100px;
+  }
+  .banner__info {
+    max-width: 542px;
+    text-align: center;
+  }
+  .banner__title {
+    margin-bottom: 40px;
+  }
+  .banner__text {
+    margin-bottom: 44px;
+  }
+
+  .banner__nav {
+   margin: 27px auto 0;
+  }
+
+  .swiper-slide {
+    height: 413px;
+  }
+
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .swiper-button-next {
+    display: none;
+  }
+}
+
+
+@media(max-width: 480px) {
+  
+}

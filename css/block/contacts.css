@@ -21,7 +21,14 @@
   color: #FFFFFF;
 }
 
-@media(max-width:480px) {
+@media(max-width: 980px) {
+   .contacts {
+    margin: 0;
+   } 
+
+}
+
+@media(max-width: 480px) {
   .contacts__mail {
     display: none;
   }
