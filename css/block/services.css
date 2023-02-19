@@ -6,3 +6,11 @@
 .services__title {
   margin-bottom: 80px;
 }
+
+
+
+@media (max-width: 760px) {
+  .services__title {
+    display: none;
+  }
+}

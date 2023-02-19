@@ -91,7 +91,7 @@
     z-index: 2;
     background-color: var(--bg-color);
     margin: 0;
-    transform: translateY(-100%);
+    transform: translate(-100%,-100%);
     padding: 80px 15px 15px 35px;
     box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.1);
     border-bottom-right-radius: 20px;
@@ -99,7 +99,7 @@
   }
 
   .menu.toggle-menu {
-    transform: translateY(0);
+    transform: translate(0,0);
   }
   .menu__list {
     flex-direction: column;

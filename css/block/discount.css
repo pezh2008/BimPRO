@@ -1,70 +1,82 @@
 .discount {
-  margin-bottom: 100px;
-  
+  padding-bottom: 200px;
 }
 
-.discount__container {
-  border-bottom: 1px solid var(--grey-color);
-  
+.discount__title1 {
+  opacity: 0;
 }
 
-.container {}
+.discount__container {}
 
 .discount__list {
-  position: relative;
   display: flex;
-  justify-content: space-between;
-  /* border-bottom: 1px solid #9B9B9B; */
-  margin-bottom: 58px;
-  padding: 0 10px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid;
 }
-
-.discount__list::after {
-  content: "";
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  height: 1px;
-  background: #9B9B9B;
-  width: 100%;
-}
-
 
 .discount__item {
   position: relative;
-  height: 101px;
+  max-width: 25%;
   width: 100%;
-  border-left: 1px solid #515151;
-  border-right: 1px solid #515151;
+  border-bottom: 1px solid #9B9B9B;
+}
+
+
+.discount__wrap {
+  padding-bottom: 19px;
+}
+
+.discount__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 101px;
+  background: #515151;
 }
 
 .discount__item::after {
   content: "";
   position: absolute;
-  bottom: 9px;
-  left: -13px;
-  height: 3px;
+  bottom: -2px;
+  left: -11px;
   width: 24px;
+  height: 3px;
   background: #515151;
   transform: rotate(135deg);
 }
 
-.discount__item:last-child::before {
+.discount__item:first-child::before {
+  left: 15px;
+}
+
+.discount__item:first-child::after {
+  left: 4px;
+}
+
+.discount__item:last-child .discount__wrap::before {
   content: "";
   position: absolute;
-  bottom: 9px;
-  right: -13px;
-  height: 3px;
+  top: 0;
+  right: 15px;
+  width: 1px;
+  height: 101px;
+  background: #515151;
+}
+
+.discount__item:last-child .discount__wrap::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 4px;
   width: 24px;
+  height: 3px;
   background: #515151;
   transform: rotate(135deg);
 }
 
-
-
-.discount__title { 
-  cursor: pointer;
-  text-align: center;
+.discount__title {
   display: flex;
   flex-direction: column;
   font-family: 'Bebas Neue';
@@ -72,31 +84,89 @@
   font-weight: 700;
   font-size: 28px;
   line-height: 30px;
+  text-align: center;
   letter-spacing: 0.01em;
   color: var(--light-color);
+
 }
 
 .discount__title span {
   color: var(--accent-color);
 }
 
-.discount__text {
+.discount__tooltip {
   opacity: 0;
-  padding: 10px 10px 8px 16px;
   position: absolute;
+  top: 67px;
   right: 0;
-  top: 70px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0px 6px 6px 6px;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.01em;
   color: #9DA0A3;
   max-width: 262px;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 0px 6px 6px 6px;
-  z-index: 6;
+  padding: 10px 10px 10px 16px;
   transition: opacity 0.5s;
 }
 
-.discount__item:hover .discount__text{
+.discount__item:hover .discount__tooltip {
   opacity: 1;
+}
+
+@media (max-width: 1200px) {
+  .discount__item {
+    max-width: 50%;
+    margin-bottom: 45px;
+  }
+
+  .discount__item:nth-child(2) .discount__wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 15px;
+    width: 1px;
+    height: 101px;
+    background: #515151;
+  }
+
+  .discount__item:nth-child(2) .discount__wrap::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: 4px;
+    width: 24px;
+    height: 3px;
+    background: #515151;
+    transform: rotate(135deg);
+  }
+
+  .discount__item:nth-child(3)::before {
+    left: 15px;
+  }
+
+  .discount__item:nth-child(3):after {
+    left: 4px;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .discount__title {
+    font-size: 20px;
+  }
+
+  .discount__item {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .discount__item::after,
+  .discount__item::before,
+  .discount__item .discount__wrap::before,
+  .discount__item .discount__wrap::after {
+    display: none;
+  }
+
 }

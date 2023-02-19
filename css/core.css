@@ -13,6 +13,12 @@ body {
   /* font-family: 'Bebas'; */
 }
 
+@media (max-width: 768px) {
+  body {
+    background-color: #2E2E31;
+  }
+}
+
 .container {
   max-width: 1400px;
   width: 100%;
