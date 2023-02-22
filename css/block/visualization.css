@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   row-gap: 26px;
   column-gap: 29px;
+  justify-content: center;
 }
 
 .visualization__link {
@@ -51,9 +52,15 @@
 }
 
 
+
+
+
+
+
 @media (max-width: 760px) {
   .visualization {
     row-gap: 17px;
+    
   }
   .visualization__link {
     max-width: 100%;

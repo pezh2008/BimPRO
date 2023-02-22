@@ -7,9 +7,15 @@
   margin-bottom: 80px;
 }
 
-
+@media (max-width: 1300px) {
+  
+  .services__title {
+    text-align: center;
+  }
+}
 
 @media (max-width: 760px) {
+  
   .services__title {
     display: none;
   }
