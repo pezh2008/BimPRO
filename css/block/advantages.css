@@ -1,0 +1,80 @@
+.advantages {
+  background: #2E2E31;;
+}
+
+.advantages__container {
+  display: flex;
+  gap: 13px;
+}
+
+.advantages__tabs {
+  max-width: 560px;
+  width: 100%;
+  padding-top: 100px;
+}
+
+.advantages__tab {
+  position: relative;
+  transition: all 0.3s;
+  padding: 46px 0;
+  overflow-x: hidden;
+  /* border-bottom: 1px solid var(--grey-light-color); */
+}
+
+
+.advantages__tab::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 486px;
+  background-color: var(--grey-light-color);
+  opacity: 0.2;
+  /* border-bottom: 1px solid var(--grey-light-color); */
+}
+
+.advantages__tab.active-tab {
+  padding-left: 45px;
+}
+
+
+.advantages__tab-title {
+  position: relative;
+  max-width: 486px;
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 50px;
+  letter-spacing: 0.01em;
+  color: var(--accent-color);
+}
+.advantages__tab-title::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  width: 20px;
+  height: 32px;
+  background-image: url(../../img/advantages/advantages.svg);
+}
+
+
+.advantages__tab-title span {
+  color: var(--light-color);
+}
+
+.advantages__contents {
+  padding-top: 148px;
+  color: #fff;
+  border-left: 1px solid rgba(157, 160, 163, 0.3);
+
+}
+
+.advantages__content {
+  display: none;
+}
+
+.advantages__content.active-content {
+  display: block;
+}
