@@ -1,0 +1,35 @@
+.modal{
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0);
+  transition: transform 0.5s;
+  max-width: 500px;
+  width: 100%;
+  min-height: 500px;
+  background-color: rgb(43, 147, 184);
+  z-index: 60;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.modal-show {
+  transform: translate(-50%,-50%) scale(1);
+}
+
+
+
+.modal__title {
+ font-size: 40px;
+}
+
+.modal__close {
+  line-height: 14px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 24px;
+  width: 24px;
+  background-color: blueviolet;
+}

@@ -15,6 +15,9 @@
 }
 
 @media (max-width: 760px) {
+  .services {
+    
+  }
   
   .services__title {
     display: none;

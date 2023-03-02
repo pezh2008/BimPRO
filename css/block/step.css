@@ -4,10 +4,6 @@
   background: #222224;
 }
 
-.step__container {}
-
-.container {}
-
 .step__title {
   margin-bottom: 82px;
 }
@@ -21,11 +17,9 @@
   justify-content: space-between;
 }
 
-
 .step__item {
   position: relative;
   text-align: center;
-
 }
 
 .step__item::after {
@@ -68,4 +62,12 @@
 
 .step__text  span{
   color: #EA4C14;
+}
+
+
+
+@media (max-width:1820px) {
+  .step {
+    display: none;
+  }
 }
