@@ -253,7 +253,16 @@ new Swiper( houses, {
   //     allowTouchMove: false,
   //   },
   // },
-  // scrollbar: {
-  //   el: ".swiper-scrollbar",
-  // },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
 });
+
+
+
+const filterBtn = document.querySelector(".project__burger");
+const filterBlock = document.querySelector(".filter");
+
+filterBtn.addEventListener("click", ()=>{
+  filterBlock.classList.toggle("active");
+})

@@ -8,7 +8,6 @@
 }
 
 @media (max-width: 1300px) {
-  
   .services__title {
     text-align: center;
   }
@@ -16,7 +15,7 @@
 
 @media (max-width: 760px) {
   .services {
-    
+    padding-bottom: 78px;
   }
   
   .services__title {
