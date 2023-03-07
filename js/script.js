@@ -65,85 +65,44 @@ observer.observe(interest);
 const tabs = document.querySelectorAll(".advantages__tab");
 const contents = document.querySelectorAll(".advantages__content");
 
-
-tabs.forEach((element,indexTab) => {
-  element.addEventListener("click",()=> {
+tabs.forEach((element, indexTab) => {
+  element.addEventListener("click", () => {
     tabs.forEach((tab) => {
       tab.classList.remove("active-tab");
     });
 
     element.classList.add("active-tab");
 
-    contents.forEach((content,indexContent)=>{
+    contents.forEach((content, indexContent) => {
       content.classList.remove("active-content");
-      if(indexTab==indexContent) {
+      if (indexTab == indexContent) {
         content.classList.add("active-content");
-      } 
-    })
+      }
+    });
   });
 });
 
-
-
-
 const titles = document.querySelectorAll(".accordion__title");
 
-
-titles.forEach((title)=>{
-  title.addEventListener("click", ()=>{
+titles.forEach((title) => {
+  title.addEventListener("click", () => {
     const content = title.nextElementSibling;
-    if(content.style.maxHeight == 0){
+    if (content.style.maxHeight == 0) {
       content.style.maxHeight = content.scrollHeight + "px";
       title.classList.add("active");
-    } else{
+    } else {
       content.style.maxHeight = null;
       title.classList.remove("active");
-    } 
-  
-  })
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
+  });
+});
 
 // const accordItems = document.querySelectorAll(".accordion__item");
 //   accordItems.forEach((el)=> {
 //     el.addEventListener("click", ()=>{
-      
+
 //     })
 //   } )
-
- 
-
-
 
 // tabs.forEach((tab) => {
 //   tab.addEventListener("click", () => {
@@ -190,51 +149,31 @@ titles.forEach((title)=>{
 //   console.log(index);
 // });
 
-
-
-
-
-
-
-
-
-
-
-
-
 const stepBtn = document.querySelector(".house__btn-play");
 const modal = document.querySelector(".modal");
 const modalClose = document.querySelector(".modal__close");
 
-
-function showModal (){
+function showModal() {
   modal.classList.add("modal-show");
 }
 
-
-stepBtn.addEventListener("click", ()=>{
-  showModal()
-})
+stepBtn.addEventListener("click", () => {
+  showModal();
+});
 
 // modalClose.addEventListener("click", ()=>{
 //  closeModal();
 // })
 
-
-function closeModal(){
+function closeModal() {
   modal.classList.remove("modal-show");
 }
-
-
 
 const houses = document.querySelector(".houses");
 const houseBtnPrev = document.querySelector(".houses__btn-prev");
 const houseBtnNext = document.querySelector(".houses__btn-next");
 
-
-
-
-new Swiper( houses, {
+new Swiper(houses, {
   // direction: 'vertical',
   // Navigation arrows
   // speed: 2400,
@@ -258,11 +197,42 @@ new Swiper( houses, {
   },
 });
 
+const projectBurger = document.querySelector(".project__burger");
+const projectFilter = document.querySelector(".project__filter");
 
 
-const filterBtn = document.querySelector(".project__burger");
-const filterBlock = document.querySelector(".filter");
 
-filterBtn.addEventListener("click", ()=>{
-  filterBlock.classList.toggle("active");
+
+
+
+
+
+projectBurger.addEventListener("click", ()=>{
+  if(projectFilter.style.maxHeight == 0) {
+  
+    projectFilter.style.maxHeight = projectFilter.scrollHeight + "px";
+  } else {
+    projectFilter.style.maxHeight = null;
+  }
+})
+
+
+
+const filterBtns = document.querySelectorAll(".project__filter-btn");
+const filteResetBtn = document.querySelector(".project__clear");
+
+filterBtns.forEach((el)=>{
+el.addEventListener("click", ()=>{
+  filterBtns.forEach((el)=>{
+    el.classList.remove("active-filter-btn");
+  })
+  el.classList.toggle("active-filter-btn");
+})
+})
+
+
+filteResetBtn.addEventListener("click", ()=>{
+  filterBtns.forEach((el)=>{
+    el.classList.remove("active-filter-btn");
+  })
 })
