@@ -1,0 +1,32 @@
+.information {
+  padding-bottom: 400px;
+}
+.information__container {
+  display: flex;
+}
+.container {
+}
+.information__tabs {
+  width: 50%;
+  color: #fff;
+  font-size: 30px;
+}
+.information__tab {
+
+}
+
+.information__tab.active {
+  color: var(--accent-color);
+}
+.information__contents {
+  width: 50%;
+  color: #fff;
+  font-size: 30px;
+}
+.information__content {
+  display: none;
+}
+
+.information__content.active {
+  display: block;
+}

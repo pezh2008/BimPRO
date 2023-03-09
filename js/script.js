@@ -200,39 +200,53 @@ new Swiper(houses, {
 const projectBurger = document.querySelector(".project__burger");
 const projectFilter = document.querySelector(".project__filter");
 
-
-
-
-
-
-
-
-projectBurger.addEventListener("click", ()=>{
-  if(projectFilter.style.maxHeight == 0) {
-  
+projectBurger.addEventListener("click", () => {
+  if (projectFilter.style.maxHeight == 0) {
     projectFilter.style.maxHeight = projectFilter.scrollHeight + "px";
   } else {
     projectFilter.style.maxHeight = null;
   }
-})
-
-
+});
 
 const filterBtns = document.querySelectorAll(".project__filter-btn");
 const filteResetBtn = document.querySelector(".project__clear");
 
-filterBtns.forEach((el)=>{
-el.addEventListener("click", ()=>{
-  filterBtns.forEach((el)=>{
-    el.classList.remove("active-filter-btn");
-  })
-  el.classList.toggle("active-filter-btn");
-})
-})
+filterBtns.forEach((el) => {
+  el.addEventListener("click", () => {
+    filterBtns.forEach((el) => {
+      el.classList.remove("active-filter-btn");
+    });
+    el.classList.toggle("active-filter-btn");
+  });
+});
 
-
-filteResetBtn.addEventListener("click", ()=>{
-  filterBtns.forEach((el)=>{
+filteResetBtn.addEventListener("click", () => {
+  filterBtns.forEach((el) => {
     el.classList.remove("active-filter-btn");
-  })
-})
+  });
+});
+
+const tabsInform = document.querySelectorAll(".information__tab");
+const contentInrorm = document.querySelectorAll(".information__content");
+
+tabsInform.forEach((el, indexTab) => {
+  el.addEventListener("click", () => {
+    tabsInform.forEach((tab) => {
+      tab.classList.remove("active");
+    });
+    el.classList.add("active");
+
+    contentInrorm.forEach((content)=>{
+      content.classList.remove("active")
+    })
+    contentInrorm[indexTab].classList.add("active");
+    // contentInrorm.forEach((content, indexContent) => {
+    //   if (indexTab == indexContent) {
+    //     contentInrorm.forEach((cont) => {
+    //       cont.classList.remove("active");
+    //     });
+    //     content.classList.add("active");
+    //   }
+    // });
+  });
+});
