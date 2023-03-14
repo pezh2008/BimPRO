@@ -1,0 +1,16 @@
+.footer__rights {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.container {}
+
+.rights__text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.02em;
+  color: #EFEFEF;
+}
